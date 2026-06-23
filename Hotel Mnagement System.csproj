@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{55B82732-7756-4577-A42E-0C3A92F29215}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Hotel_Mnagement_System</RootNamespace>
+    <AssemblyName>Hotel Mnagement System</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.7\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Customers\Controls\ctrlCustomerCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Customers\Controls\ctrlCustomerCard.Designer.cs">
+      <DependentUpon>ctrlCustomerCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\frmAddUpdateCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers\frmAddUpdateCustomer.Designer.cs">
+      <DependentUpon>frmAddUpdateCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\frmListAddFindCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers\frmListAddFindCustomers.Designer.cs">
+      <DependentUpon>frmListAddFindCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\Group Customer\frmAddNew Group Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers\Group Customer\frmAddNew Group Customer.Designer.cs">
+      <DependentUpon>frmAddNew Group Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees\Controls\ctrlEmployeeFiltering.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Employees\Controls\ctrlEmployeeFiltering.Designer.cs">
+      <DependentUpon>ctrlEmployeeFiltering.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees\Controls\ctrlEmployeeInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Employees\Controls\ctrlEmployeeInfo.Designer.cs">
+      <DependentUpon>ctrlEmployeeInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees\frmAddNewEditEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees\frmAddNewEditEmployee.Designer.cs">
+      <DependentUpon>frmAddNewEditEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees\frmEmployeeDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees\frmEmployeeDetails.Designer.cs">
+      <DependentUpon>frmEmployeeDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees\frmEmployeeFine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees\frmEmployeeFine.Designer.cs">
+      <DependentUpon>frmEmployeeFine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees\frmManageListEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees\frmManageListEmployees.Designer.cs">
+      <DependentUpon>frmManageListEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="global classes\clsDate.cs" />
+    <Compile Include="global classes\clsFormat.cs" />
+    <Compile Include="global classes\clsGlobal.cs" />
+    <Compile Include="global classes\clsValidatoin.cs" />
+    <Compile Include="global classes\clsMailService.cs" />
+    <Compile Include="global classes\util.cs" />
+    <Compile Include="login\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repotrs\frmListReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Repotrs\frmListReports.Designer.cs">
+      <DependentUpon>frmListReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reservations\frmAddNewReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reservations\frmAddNewReservation.Designer.cs">
+      <DependentUpon>frmAddNewReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reservations\frmManageListReservations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reservations\frmManageListReservations.Designer.cs">
+      <DependentUpon>frmManageListReservations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reservations\frmRenew Reservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reservations\frmRenew Reservation.Designer.cs">
+      <DependentUpon>frmRenew Reservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rooms\frmAddRoomsToSystem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rooms\frmAddRoomsToSystem.Designer.cs">
+      <DependentUpon>frmAddRoomsToSystem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rooms\frmManageListRooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rooms\frmManageListRooms.Designer.cs">
+      <DependentUpon>frmManageListRooms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ctrlUserCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Users\ctrlUserCard.Designer.cs">
+      <DependentUpon>ctrlUserCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmAddEditUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmAddEditUser.Designer.cs">
+      <DependentUpon>frmAddEditUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmChangePassword.Designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmList User Managment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmList User Managment.Designer.cs">
+      <DependentUpon>frmList User Managment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmUserr Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmUserr Info.Designer.cs">
+      <DependentUpon>frmUserr Info.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Customers\Controls\ctrlCustomerCard.resx">
+      <DependentUpon>ctrlCustomerCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\frmAddUpdateCustomer.resx">
+      <DependentUpon>frmAddUpdateCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\frmListAddFindCustomers.resx">
+      <DependentUpon>frmListAddFindCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\Group Customer\frmAddNew Group Customer.resx">
+      <DependentUpon>frmAddNew Group Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees\Controls\ctrlEmployeeFiltering.resx">
+      <DependentUpon>ctrlEmployeeFiltering.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees\Controls\ctrlEmployeeInfo.resx">
+      <DependentUpon>ctrlEmployeeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees\frmAddNewEditEmployee.resx">
+      <DependentUpon>frmAddNewEditEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees\frmEmployeeDetails.resx">
+      <DependentUpon>frmEmployeeDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees\frmEmployeeFine.resx">
+      <DependentUpon>frmEmployeeFine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees\frmManageListEmployees.resx">
+      <DependentUpon>frmManageListEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Repotrs\frmListReports.resx">
+      <DependentUpon>frmListReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservations\frmAddNewReservation.resx">
+      <DependentUpon>frmAddNewReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservations\frmManageListReservations.resx">
+      <DependentUpon>frmManageListReservations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservations\frmRenew Reservation.resx">
+      <DependentUpon>frmRenew Reservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rooms\frmAddRoomsToSystem.resx">
+      <DependentUpon>frmAddRoomsToSystem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rooms\frmManageListRooms.resx">
+      <DependentUpon>frmManageListRooms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\ctrlUserCard.resx">
+      <DependentUpon>ctrlUserCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmAddEditUser.resx">
+      <DependentUpon>frmAddEditUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmList User Managment.resx">
+      <DependentUpon>frmList User Managment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmUserr Info.resx">
+      <DependentUpon>frmUserr Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account_settings 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add Employee 40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add Employee 72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add New User 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add New User 72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddAppointment 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddEmployee 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Address 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\call 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CloseBlack1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\closeBlack32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Count 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Country 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete 32 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Email 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EmployeeDetails 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Employees 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Employees 400.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Employees 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Faild.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Female 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo Final.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Male 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Man 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Manage Employees.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money 32 - 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Next 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Next 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notes 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Number 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Password 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Person 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Phone 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Question 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchEmployee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send email 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sign Out 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign_in 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign_out 32 -2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SignOut 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User 32 -2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users 2 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users 2 400.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Woman 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Manage Customers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customers_edit 72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customers_edit 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customers_edit 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customers_close 72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customers_close 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customers_close 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customers_add 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customers_add 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Manage Customers 72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Manage customers 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Manage Reserva appointment 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Manage Reserva appointment  72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Manage Reserva appointment 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customers_add 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customers_add 641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customers_close 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddEmployee 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appointment_add   64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appointment_add 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Employee_Add 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Employee_Add 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Employee_delete 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Employee_delete 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Employee_Info 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Employee_Info 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Employee_Save 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Employee_Save 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Employee_update 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Employee_update 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Manage Employee 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appointment_edit  64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appointment_edit  72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appointment_edit 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\call 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Appointment Add 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search 72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add_room 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add_room 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add_room 72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Manage_Room 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Manage_Room 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Manage_Room 72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rented_room 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rented_room 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rented_room 72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reserved_Room 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reserved_Room 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reserved_Room 72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_Room 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_Room 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_Room 72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unreserved_Room  64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unreserved_Room  72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unreserved_Room 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sort_by_status 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sort_by_status 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sort_by_status 72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\status 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\status 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\status 72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\status_report %2864.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\status_report 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\status_report 72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddEmployee 322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Room_types 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Room_types 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\room_types 72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sort A to Z 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sort A to Z 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sort A to Z 72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataBaseSetupscript.sql" />
+    <Content Include="global classes\clsDate.h" />
+    <Content Include="Icon Hotel\account_settings 64.png" />
+    <Content Include="Icon Hotel\Add Employee 40.png" />
+    <Content Include="Icon Hotel\Add Employee 72.png" />
+    <Content Include="Icon Hotel\Add New User 32.png" />
+    <Content Include="Icon Hotel\Add New User 72.png" />
+    <Content Include="Icon Hotel\AddAppointment 32.png" />
+    <Content Include="Icon Hotel\AddEmployee 32.png" />
+    <Content Include="Icon Hotel\Address 32.png" />
+    <Content Include="Icon Hotel\Add_room 32.png" />
+    <Content Include="Icon Hotel\Add_room 64.png" />
+    <Content Include="Icon Hotel\Add_room 72.png" />
+    <Content Include="Icon Hotel\Appointment Add 32.png" />
+    <Content Include="Icon Hotel\appointment_add   64.png" />
+    <Content Include="Icon Hotel\appointment_add 32.png" />
+    <Content Include="Icon Hotel\appointment_edit  64.png" />
+    <Content Include="Icon Hotel\appointment_edit  72.png" />
+    <Content Include="Icon Hotel\appointment_edit 32.png" />
+    <Content Include="Icon Hotel\Calendar 32.png" />
+    <Content Include="Icon Hotel\call 32.png" />
+    <Content Include="Icon Hotel\Close 32.png" />
+    <Content Include="Icon Hotel\Close 64.png" />
+    <Content Include="Icon Hotel\CloseBlack1.png" />
+    <Content Include="Icon Hotel\closeBlack32.png" />
+    <Content Include="Icon Hotel\Count 32.png" />
+    <Content Include="Icon Hotel\Country 32.png" />
+    <Content Include="Icon Hotel\cross 32.png" />
+    <Content Include="Icon Hotel\cross 64.png" />
+    <Content Include="Icon Hotel\customers_add 32.png" />
+    <Content Include="Icon Hotel\customers_add 64.png" />
+    <Content Include="Icon Hotel\customers_close 32.png" />
+    <Content Include="Icon Hotel\customers_close 64.png" />
+    <Content Include="Icon Hotel\customers_close 72.png" />
+    <Content Include="Icon Hotel\customers_edit 32.png" />
+    <Content Include="Icon Hotel\customers_edit 64.png" />
+    <Content Include="Icon Hotel\customers_edit 72.png" />
+    <Content Include="Icon Hotel\Delete 32 2.png" />
+    <Content Include="Icon Hotel\Delete 32.png" />
+    <Content Include="Icon Hotel\edit 32.png" />
+    <Content Include="Icon Hotel\Email 32.png" />
+    <Content Include="Icon Hotel\EmployeeDetails 32.png" />
+    <Content Include="Icon Hotel\Employees 400.png" />
+    <Content Include="Icon Hotel\Employees 512.png" />
+    <Content Include="Icon Hotel\Employees 64.png" />
+    <Content Include="Icon Hotel\Employee_Add 32.png" />
+    <Content Include="Icon Hotel\Employee_Add 64.png" />
+    <Content Include="Icon Hotel\Employee_delete 32.png" />
+    <Content Include="Icon Hotel\Employee_delete 64.png" />
+    <Content Include="Icon Hotel\Employee_Info 32.png" />
+    <Content Include="Icon Hotel\Employee_Info 64.png" />
+    <Content Include="Icon Hotel\Employee_Save 32.png" />
+    <Content Include="Icon Hotel\Employee_Save 64.png" />
+    <Content Include="Icon Hotel\Employee_update 32.png" />
+    <Content Include="Icon Hotel\Employee_update 64.png" />
+    <Content Include="Icon Hotel\Faild.png" />
+    <Content Include="Icon Hotel\Female 512.png" />
+    <Content Include="Icon Hotel\general_reports 32.png" />
+    <Content Include="Icon Hotel\general_reports 64.png" />
+    <Content Include="Icon Hotel\general_reports 72.png" />
+    <Content Include="Icon Hotel\IconLogo.png" />
+    <Content Include="Icon Hotel\Logo Final.jpg" />
+    <Content Include="Icon Hotel\Male 512.png" />
+    <Content Include="Icon Hotel\Man 32.png" />
+    <Content Include="Icon Hotel\Manage customers 64.png" />
+    <Content Include="Icon Hotel\Manage Customers 72.png" />
+    <Content Include="Icon Hotel\Manage Employee 32.png" />
+    <Content Include="Icon Hotel\Manage Employee 64.png" />
+    <Content Include="Icon Hotel\Manage Employee 74.png" />
+    <Content Include="Icon Hotel\Manage Employees.png" />
+    <Content Include="Icon Hotel\Manage Reserva appointment  72.png" />
+    <Content Include="Icon Hotel\Manage Reserva appointment 32.png" />
+    <Content Include="Icon Hotel\Manage Reserva appointment 64.png" />
+    <Content Include="Icon Hotel\Manage_Room 32.png" />
+    <Content Include="Icon Hotel\Manage_Room 64.png" />
+    <Content Include="Icon Hotel\Manage_Room 72.png" />
+    <Content Include="Icon Hotel\money 32 - 2.png" />
+    <Content Include="Icon Hotel\money 32.png" />
+    <Content Include="Icon Hotel\Next 32.png" />
+    <Content Include="Icon Hotel\Next 64.png" />
+    <Content Include="Icon Hotel\Notes 32.png" />
+    <Content Include="Icon Hotel\Number 32.png" />
+    <Content Include="Icon Hotel\Password 32.png" />
+    <Content Include="Icon Hotel\Person 32.png" />
+    <Content Include="Icon Hotel\Phone 32.png" />
+    <Content Include="Icon Hotel\Question 32.png" />
+    <Content Include="Icon Hotel\Rented_room 32.png" />
+    <Content Include="Icon Hotel\Rented_room 64.png" />
+    <Content Include="Icon Hotel\Rented_room 72.png" />
+    <Content Include="Icon Hotel\Reserved_Room 32.png" />
+    <Content Include="Icon Hotel\Reserved_Room 64.png" />
+    <Content Include="Icon Hotel\Reserved_Room 72.png" />
+    <Content Include="Icon Hotel\Room_types 32.png" />
+    <Content Include="Icon Hotel\Room_types 64.png" />
+    <Content Include="Icon Hotel\room_types 72.png" />
+    <Content Include="Icon Hotel\Save 32.png" />
+    <Content Include="Icon Hotel\Save_Room 32.png" />
+    <Content Include="Icon Hotel\Save_Room 64.png" />
+    <Content Include="Icon Hotel\Save_Room 72.png" />
+    <Content Include="Icon Hotel\search 32.png" />
+    <Content Include="Icon Hotel\search 64.png" />
+    <Content Include="Icon Hotel\search 72.png" />
+    <Content Include="Icon Hotel\SearchEmployee.png" />
+    <Content Include="Icon Hotel\send email 32.png" />
+    <Content Include="Icon Hotel\Sign Out 32.png" />
+    <Content Include="Icon Hotel\SignOut 64.png" />
+    <Content Include="Icon Hotel\sign_in 32.png" />
+    <Content Include="Icon Hotel\sign_out 32 -2.png" />
+    <Content Include="Icon Hotel\sort A to Z 32.png" />
+    <Content Include="Icon Hotel\sort A to Z 64.png" />
+    <Content Include="Icon Hotel\sort A to Z 72.png" />
+    <Content Include="Icon Hotel\sort_by_status 32.png" />
+    <Content Include="Icon Hotel\sort_by_status 64.png" />
+    <Content Include="Icon Hotel\sort_by_status 72.png" />
+    <Content Include="Icon Hotel\status 32.png" />
+    <Content Include="Icon Hotel\status 64.png" />
+    <Content Include="Icon Hotel\status 72.png" />
+    <Content Include="Icon Hotel\status_report %2864.png" />
+    <Content Include="Icon Hotel\status_report 32.png" />
+    <Content Include="Icon Hotel\status_report 72.png" />
+    <Content Include="Icon Hotel\Unreserved_Room  64.png" />
+    <Content Include="Icon Hotel\Unreserved_Room  72.png" />
+    <Content Include="Icon Hotel\Unreserved_Room 32.png" />
+    <Content Include="Icon Hotel\User 32 -2.png" />
+    <Content Include="Icon Hotel\Users 2 400.png" />
+    <Content Include="Icon Hotel\Users 2 64.png" />
+    <Content Include="Icon Hotel\users 64.png" />
+    <Content Include="Icon Hotel\Woman 32.png" />
+    <None Include="Resources\general_reports 72.png" />
+    <None Include="Resources\general_reports 64.png" />
+    <None Include="Resources\general_reports 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Business Hotel Management System\Business Hotel Management System.csproj">
+      <Project>{3abc7369-e331-4734-bba0-124f1bb0f026}</Project>
+      <Name>Business Hotel Management System</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
