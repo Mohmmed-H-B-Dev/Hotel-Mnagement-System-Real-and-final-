@@ -10,6 +10,9 @@ namespace Data_Access_Hotel_Management_System
  
         public class clsReservationsData
         {
+
+
+
             public static bool GetReservationByReservationID(int ReservationID,
                 ref int RoomID, ref int CustomerID, ref DateTime DateTime, ref DateTime LastDateTime,
                 ref DateTime CheckInDate, ref DateTime CheckOutDate,
@@ -384,7 +387,7 @@ namespace Data_Access_Hotel_Management_System
         {
             DataTable dt = new DataTable();
             string query = "SELECT RoomID,ReservationID,CustomerID,CheckInDate,CheckOutDate " +
-                "FROM ExpiredReservations ;";
+                "FROM ExpiredReservations  ;";
 
             using (SqlConnection conn = new SqlConnection(clsDataAccessSitting.ConnectionString))
             {

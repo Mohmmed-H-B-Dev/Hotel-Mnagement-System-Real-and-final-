@@ -17,6 +17,9 @@ namespace DVLD.Classes
 {
     internal static  class clsGlobal
     {
+        public static TimeSpan TimeIn = new TimeSpan(14, 0, 0);
+
+        public static TimeSpan TimeOut =new TimeSpan(12,0,0);
         public static clsUser CurrentUser;
 
         public static string ComputeHashing(string Input)

@@ -34,6 +34,7 @@ namespace Hotel_Mnagement_System.Reservations
             txtStatus.Text="New";
             _Mode = enMod.enAdd;
             this.Text ="Add New Reservation.";
+           
         }
         public frmAddNewReservation(int ReservationID)
         {

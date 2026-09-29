@@ -28,7 +28,6 @@ namespace Hotel_Mnagement_System.Reservations
         public frmManageListReservations()
         {
             InitializeComponent();
-            ExpiredReservations();
         }
 
         private void HandelEventLogViewer(int n1 , string Message,EventLogEntryType type)
@@ -180,8 +179,8 @@ namespace Hotel_Mnagement_System.Reservations
 
                 await Task.Run(() =>
                 {
-                    لازم نعملها في كلاس منفصل عشان نقدر نشغلها اول مايفتح النظام ونعملها
-                في الخلفية عشان لو فيه اي حد حجز وحصلت مشكلة في النظام نقدر نعرف ونرسل ايميل للعميل
+             //       لازم نعملها في كلاس منفصل عشان نقدر نشغلها اول مايفتح النظام ونعملها
+            //    في الخلفية عشان لو فيه اي حد حجز وحصلت مشكلة في النظام نقدر نعرف ونرسل ايميل للعميل
                     _HanderRoomsAndExpiredReservation();
                     });
 
@@ -206,8 +205,8 @@ namespace Hotel_Mnagement_System.Reservations
             //update status reservation and update status room in one store procedure to avoid any problem in case
             //of any error happen in the middle of the process
             _ExpiredReservation=clsReservations.GetExpiredReservations();
-            لازم نعملها في كلاس منفصل عشان نقدر نشغلها اول مايفتح النظام ونعملها 
-                في الخلفية عشان لو فيه اي حد حجز وحصلت مشكلة في النظام نقدر نعرف ونرسل ايميل للعميل
+        //    لازم نعملها في كلاس منفصل عشان نقدر نشغلها اول مايفتح النظام ونعملها 
+          //      في الخلفية عشان لو فيه اي حد حجز وحصلت مشكلة في النظام نقدر نعرف ونرسل ايميل للعميل
             if (_ExpiredReservation==null)
             return false;
             TimeSpan HoursForClient = new TimeSpan();
@@ -239,31 +238,9 @@ namespace Hotel_Mnagement_System.Reservations
 
             }
 
-            return (UpdateRooms && UpdateExpiredReservation);
+            return true;
+       //     return (UpdateRooms && UpdateExpiredReservation);
         }
-        //private void btnExpiredBooking_Click(object sender, EventArgs e)
-        //{
-
-        //    if(MessageBox.Show("This Button is going to do  update status Room to (Vacant) ,, And update status reservation to (Completed).", "Confirm",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
-        //    {
-        //        if (MessageBox.Show("Ary you sure to update all expired reservation?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question)==DialogResult.Yes)
-        //        {
-        //            if (_HanderRoomsAndExpiredReservation())
-        //            {
-        //                MessageBox.Show("The rooms were successfully evacuated.", "Confirm", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //                frmManageListReservations_Load(null, null);
-        //            }else
-        //            {
-                        
-        //                MessageBox.Show("Evacuation of rooms was unsuccessful.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-        //            }
-        //        }
-        //    }
-            
-
-
-        //}
 
 
 
@@ -276,5 +253,35 @@ namespace Hotel_Mnagement_System.Reservations
 
 
         }
+
+        private void gbRoomInfo_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+
+
+//private void btnExpiredBooking_Click(object sender, EventArgs e)
+//{
+
+//    if(MessageBox.Show("This Button is going to do  update status Room to (Vacant) ,, And update status reservation to (Completed).", "Confirm",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
+//    {
+//        if (MessageBox.Show("Ary you sure to update all expired reservation?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question)==DialogResult.Yes)
+//        {
+//            if (_HanderRoomsAndExpiredReservation())
+//            {
+//                MessageBox.Show("The rooms were successfully evacuated.", "Confirm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+//                frmManageListReservations_Load(null, null);
+//            }else
+//            {
+
+//                MessageBox.Show("Evacuation of rooms was unsuccessful.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+//            }
+//        }
+//    }
+
+
+
+//}

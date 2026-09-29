@@ -55,27 +55,27 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbBasicInfoAdd = new System.Windows.Forms.GroupBox();
+            this.pControl_Grouptxt = new System.Windows.Forms.Panel();
             this.gbTotalFees = new System.Windows.Forms.GroupBox();
             this.txtTotalFees = new System.Windows.Forms.TextBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txtVAT = new System.Windows.Forms.TextBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtFeesDiscount = new System.Windows.Forms.TextBox();
-            this.pbImageFeesAfterDiscount = new System.Windows.Forms.PictureBox();
-            this.lblFeesAfterDiscount = new System.Windows.Forms.Label();
             this.txtTotalFeesAfterDiscount = new System.Windows.Forms.TextBox();
-            this.btnCalculateTheTotalFees = new System.Windows.Forms.Button();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtReservationID = new System.Windows.Forms.TextBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtTotalBasicFees = new System.Windows.Forms.TextBox();
-            this.txtStatus = new System.Windows.Forms.TextBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtStatus = new System.Windows.Forms.TextBox();
+            this.txtVAT = new System.Windows.Forms.TextBox();
+            this.txtTotalBasicFees = new System.Windows.Forms.TextBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.txtFeesDiscount = new System.Windows.Forms.TextBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pbImageFeesAfterDiscount = new System.Windows.Forms.PictureBox();
+            this.txtReservationID = new System.Windows.Forms.TextBox();
+            this.lblFeesAfterDiscount = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.txtNotes = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -85,6 +85,7 @@
             this.dtpFromDate = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnCalculateTheTotalFees = new System.Windows.Forms.Button();
             this.btnChooseCustomer = new System.Windows.Forms.Button();
             this.btnChooseRoom = new System.Windows.Forms.Button();
             this.gbFilterByDayOrMonth = new System.Windows.Forms.GroupBox();
@@ -95,25 +96,24 @@
             this.gbControlBooking = new System.Windows.Forms.GroupBox();
             this.lblCreatedByUserID = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.pControl_Grouptxt = new System.Windows.Forms.Panel();
             this.gbRoomInfo.SuspendLayout();
             this.gbCustomerInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbBasicInfoAdd.SuspendLayout();
+            this.pControl_Grouptxt.SuspendLayout();
             this.gbTotalFees.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImageFeesAfterDiscount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.gbFilterByDayOrMonth.SuspendLayout();
             this.gbC_R.SuspendLayout();
             this.gbControlBooking.SuspendLayout();
-            this.pControl_Grouptxt.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbRoomInfo
@@ -423,6 +423,32 @@
             this.gbBasicInfoAdd.TabStop = false;
             this.gbBasicInfoAdd.Text = "Basic Info";
             // 
+            // pControl_Grouptxt
+            // 
+            this.pControl_Grouptxt.Controls.Add(this.gbTotalFees);
+            this.pControl_Grouptxt.Controls.Add(this.txtTotalFeesAfterDiscount);
+            this.pControl_Grouptxt.Controls.Add(this.pictureBox9);
+            this.pControl_Grouptxt.Controls.Add(this.label11);
+            this.pControl_Grouptxt.Controls.Add(this.label16);
+            this.pControl_Grouptxt.Controls.Add(this.txtStatus);
+            this.pControl_Grouptxt.Controls.Add(this.txtVAT);
+            this.pControl_Grouptxt.Controls.Add(this.txtTotalBasicFees);
+            this.pControl_Grouptxt.Controls.Add(this.pictureBox8);
+            this.pControl_Grouptxt.Controls.Add(this.label12);
+            this.pControl_Grouptxt.Controls.Add(this.label14);
+            this.pControl_Grouptxt.Controls.Add(this.pictureBox5);
+            this.pControl_Grouptxt.Controls.Add(this.txtFeesDiscount);
+            this.pControl_Grouptxt.Controls.Add(this.pictureBox6);
+            this.pControl_Grouptxt.Controls.Add(this.pbImageFeesAfterDiscount);
+            this.pControl_Grouptxt.Controls.Add(this.txtReservationID);
+            this.pControl_Grouptxt.Controls.Add(this.lblFeesAfterDiscount);
+            this.pControl_Grouptxt.Controls.Add(this.label13);
+            this.pControl_Grouptxt.Controls.Add(this.pictureBox7);
+            this.pControl_Grouptxt.Location = new System.Drawing.Point(465, 20);
+            this.pControl_Grouptxt.Name = "pControl_Grouptxt";
+            this.pControl_Grouptxt.Size = new System.Drawing.Size(613, 213);
+            this.pControl_Grouptxt.TabIndex = 33;
+            // 
             // gbTotalFees
             // 
             this.gbTotalFees.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -445,83 +471,6 @@
             this.txtTotalFees.TabIndex = 51;
             this.txtTotalFees.Text = "$000,000";
             // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = global::Hotel_Mnagement_System.Properties.Resources.money_32;
-            this.pictureBox9.Location = new System.Drawing.Point(452, 110);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(34, 31);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 50;
-            this.pictureBox9.TabStop = false;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(488, 88);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(51, 19);
-            this.label16.TabIndex = 49;
-            this.label16.Text = "VAT :";
-            // 
-            // txtVAT
-            // 
-            this.txtVAT.Enabled = false;
-            this.txtVAT.Location = new System.Drawing.Point(501, 114);
-            this.txtVAT.Name = "txtVAT";
-            this.txtVAT.ReadOnly = true;
-            this.txtVAT.Size = new System.Drawing.Size(99, 27);
-            this.txtVAT.TabIndex = 48;
-            this.txtVAT.Text = "$000,000";
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::Hotel_Mnagement_System.Properties.Resources.money_32;
-            this.pictureBox8.Location = new System.Drawing.Point(452, 39);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(34, 31);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 47;
-            this.pictureBox8.TabStop = false;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(488, 17);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(102, 19);
-            this.label14.TabIndex = 46;
-            this.label14.Text = " Fees Discont";
-            // 
-            // txtFeesDiscount
-            // 
-            this.txtFeesDiscount.Enabled = false;
-            this.txtFeesDiscount.Location = new System.Drawing.Point(501, 43);
-            this.txtFeesDiscount.Name = "txtFeesDiscount";
-            this.txtFeesDiscount.ReadOnly = true;
-            this.txtFeesDiscount.Size = new System.Drawing.Size(99, 27);
-            this.txtFeesDiscount.TabIndex = 45;
-            this.txtFeesDiscount.Text = "$000,000";
-            // 
-            // pbImageFeesAfterDiscount
-            // 
-            this.pbImageFeesAfterDiscount.Image = global::Hotel_Mnagement_System.Properties.Resources.money_32;
-            this.pbImageFeesAfterDiscount.Location = new System.Drawing.Point(156, 93);
-            this.pbImageFeesAfterDiscount.Name = "pbImageFeesAfterDiscount";
-            this.pbImageFeesAfterDiscount.Size = new System.Drawing.Size(34, 31);
-            this.pbImageFeesAfterDiscount.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbImageFeesAfterDiscount.TabIndex = 44;
-            this.pbImageFeesAfterDiscount.TabStop = false;
-            // 
-            // lblFeesAfterDiscount
-            // 
-            this.lblFeesAfterDiscount.AutoSize = true;
-            this.lblFeesAfterDiscount.Location = new System.Drawing.Point(20, 99);
-            this.lblFeesAfterDiscount.Name = "lblFeesAfterDiscount";
-            this.lblFeesAfterDiscount.Size = new System.Drawing.Size(121, 19);
-            this.lblFeesAfterDiscount.TabIndex = 43;
-            this.lblFeesAfterDiscount.Text = "After Discount :";
-            // 
             // txtTotalFeesAfterDiscount
             // 
             this.txtTotalFeesAfterDiscount.Enabled = false;
@@ -532,88 +481,33 @@
             this.txtTotalFeesAfterDiscount.TabIndex = 42;
             this.txtTotalFeesAfterDiscount.Text = "$000,000";
             // 
-            // btnCalculateTheTotalFees
+            // pictureBox9
             // 
-            this.btnCalculateTheTotalFees.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCalculateTheTotalFees.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.btnCalculateTheTotalFees.Image = global::Hotel_Mnagement_System.Properties.Resources.money_32___2;
-            this.btnCalculateTheTotalFees.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCalculateTheTotalFees.Location = new System.Drawing.Point(684, 305);
-            this.btnCalculateTheTotalFees.Name = "btnCalculateTheTotalFees";
-            this.btnCalculateTheTotalFees.Size = new System.Drawing.Size(204, 35);
-            this.btnCalculateTheTotalFees.TabIndex = 25;
-            this.btnCalculateTheTotalFees.Text = "Calculate The Total Fees";
-            this.btnCalculateTheTotalFees.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCalculateTheTotalFees.UseVisualStyleBackColor = true;
-            this.btnCalculateTheTotalFees.Click += new System.EventHandler(this.btnCalculateTheTotalFees_Click);
+            this.pictureBox9.Image = global::Hotel_Mnagement_System.Properties.Resources.money_32;
+            this.pictureBox9.Location = new System.Drawing.Point(452, 110);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(34, 31);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 50;
+            this.pictureBox9.TabStop = false;
             // 
-            // pictureBox7
+            // label11
             // 
-            this.pictureBox7.Image = global::Hotel_Mnagement_System.Properties.Resources.Number_32;
-            this.pictureBox7.Location = new System.Drawing.Point(156, 130);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(34, 31);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 41;
-            this.pictureBox7.TabStop = false;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(78, 17);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(63, 19);
+            this.label11.TabIndex = 33;
+            this.label11.Text = "Status :";
             // 
-            // label13
+            // label16
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(17, 138);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(124, 19);
-            this.label13.TabIndex = 40;
-            this.label13.Text = "Reservation ID :";
-            // 
-            // txtReservationID
-            // 
-            this.txtReservationID.Enabled = false;
-            this.txtReservationID.Location = new System.Drawing.Point(196, 130);
-            this.txtReservationID.Name = "txtReservationID";
-            this.txtReservationID.ReadOnly = true;
-            this.txtReservationID.Size = new System.Drawing.Size(233, 27);
-            this.txtReservationID.TabIndex = 39;
-            this.txtReservationID.Text = "[????]";
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::Hotel_Mnagement_System.Properties.Resources.money_32;
-            this.pictureBox6.Location = new System.Drawing.Point(156, 60);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(34, 31);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 38;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::Hotel_Mnagement_System.Properties.Resources.status_64;
-            this.pictureBox5.Location = new System.Drawing.Point(156, 9);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(34, 31);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 37;
-            this.pictureBox5.TabStop = false;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(13, 64);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(127, 19);
-            this.label12.TabIndex = 36;
-            this.label12.Text = "Total Basic Fees:";
-            // 
-            // txtTotalBasicFees
-            // 
-            this.txtTotalBasicFees.Enabled = false;
-            this.txtTotalBasicFees.Location = new System.Drawing.Point(196, 60);
-            this.txtTotalBasicFees.Name = "txtTotalBasicFees";
-            this.txtTotalBasicFees.ReadOnly = true;
-            this.txtTotalBasicFees.Size = new System.Drawing.Size(233, 27);
-            this.txtTotalBasicFees.TabIndex = 35;
-            this.txtTotalBasicFees.Text = "$000,000";
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(488, 88);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(51, 19);
+            this.label16.TabIndex = 49;
+            this.label16.Text = "VAT :";
             // 
             // txtStatus
             // 
@@ -625,14 +519,131 @@
             this.txtStatus.TabIndex = 34;
             this.txtStatus.Text = "[????]";
             // 
-            // label11
+            // txtVAT
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(78, 17);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(63, 19);
-            this.label11.TabIndex = 33;
-            this.label11.Text = "Status :";
+            this.txtVAT.Enabled = false;
+            this.txtVAT.Location = new System.Drawing.Point(501, 114);
+            this.txtVAT.Name = "txtVAT";
+            this.txtVAT.ReadOnly = true;
+            this.txtVAT.Size = new System.Drawing.Size(99, 27);
+            this.txtVAT.TabIndex = 48;
+            this.txtVAT.Text = "$000,000";
+            // 
+            // txtTotalBasicFees
+            // 
+            this.txtTotalBasicFees.Enabled = false;
+            this.txtTotalBasicFees.Location = new System.Drawing.Point(196, 60);
+            this.txtTotalBasicFees.Name = "txtTotalBasicFees";
+            this.txtTotalBasicFees.ReadOnly = true;
+            this.txtTotalBasicFees.Size = new System.Drawing.Size(233, 27);
+            this.txtTotalBasicFees.TabIndex = 35;
+            this.txtTotalBasicFees.Text = "$000,000";
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::Hotel_Mnagement_System.Properties.Resources.money_32;
+            this.pictureBox8.Location = new System.Drawing.Point(452, 39);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(34, 31);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 47;
+            this.pictureBox8.TabStop = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(13, 64);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(127, 19);
+            this.label12.TabIndex = 36;
+            this.label12.Text = "Total Basic Fees:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(488, 17);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(102, 19);
+            this.label14.TabIndex = 46;
+            this.label14.Text = " Fees Discont";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::Hotel_Mnagement_System.Properties.Resources.status_64;
+            this.pictureBox5.Location = new System.Drawing.Point(156, 9);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(34, 31);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 37;
+            this.pictureBox5.TabStop = false;
+            // 
+            // txtFeesDiscount
+            // 
+            this.txtFeesDiscount.Enabled = false;
+            this.txtFeesDiscount.Location = new System.Drawing.Point(501, 43);
+            this.txtFeesDiscount.Name = "txtFeesDiscount";
+            this.txtFeesDiscount.ReadOnly = true;
+            this.txtFeesDiscount.Size = new System.Drawing.Size(99, 27);
+            this.txtFeesDiscount.TabIndex = 45;
+            this.txtFeesDiscount.Text = "$000,000";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::Hotel_Mnagement_System.Properties.Resources.money_32;
+            this.pictureBox6.Location = new System.Drawing.Point(156, 60);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(34, 31);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 38;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pbImageFeesAfterDiscount
+            // 
+            this.pbImageFeesAfterDiscount.Image = global::Hotel_Mnagement_System.Properties.Resources.money_32;
+            this.pbImageFeesAfterDiscount.Location = new System.Drawing.Point(156, 93);
+            this.pbImageFeesAfterDiscount.Name = "pbImageFeesAfterDiscount";
+            this.pbImageFeesAfterDiscount.Size = new System.Drawing.Size(34, 31);
+            this.pbImageFeesAfterDiscount.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbImageFeesAfterDiscount.TabIndex = 44;
+            this.pbImageFeesAfterDiscount.TabStop = false;
+            // 
+            // txtReservationID
+            // 
+            this.txtReservationID.Enabled = false;
+            this.txtReservationID.Location = new System.Drawing.Point(196, 130);
+            this.txtReservationID.Name = "txtReservationID";
+            this.txtReservationID.ReadOnly = true;
+            this.txtReservationID.Size = new System.Drawing.Size(233, 27);
+            this.txtReservationID.TabIndex = 39;
+            this.txtReservationID.Text = "[????]";
+            // 
+            // lblFeesAfterDiscount
+            // 
+            this.lblFeesAfterDiscount.AutoSize = true;
+            this.lblFeesAfterDiscount.Location = new System.Drawing.Point(20, 99);
+            this.lblFeesAfterDiscount.Name = "lblFeesAfterDiscount";
+            this.lblFeesAfterDiscount.Size = new System.Drawing.Size(121, 19);
+            this.lblFeesAfterDiscount.TabIndex = 43;
+            this.lblFeesAfterDiscount.Text = "After Discount :";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(17, 138);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(124, 19);
+            this.label13.TabIndex = 40;
+            this.label13.Text = "Reservation ID :";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::Hotel_Mnagement_System.Properties.Resources.Number_32;
+            this.pictureBox7.Location = new System.Drawing.Point(156, 130);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(34, 31);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 41;
+            this.pictureBox7.TabStop = false;
             // 
             // txtNotes
             // 
@@ -716,6 +727,21 @@
             this.label2.Size = new System.Drawing.Size(94, 19);
             this.label2.TabIndex = 25;
             this.label2.Text = "From Date :";
+            // 
+            // btnCalculateTheTotalFees
+            // 
+            this.btnCalculateTheTotalFees.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCalculateTheTotalFees.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.btnCalculateTheTotalFees.Image = global::Hotel_Mnagement_System.Properties.Resources.money_32___2;
+            this.btnCalculateTheTotalFees.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCalculateTheTotalFees.Location = new System.Drawing.Point(684, 305);
+            this.btnCalculateTheTotalFees.Name = "btnCalculateTheTotalFees";
+            this.btnCalculateTheTotalFees.Size = new System.Drawing.Size(204, 35);
+            this.btnCalculateTheTotalFees.TabIndex = 25;
+            this.btnCalculateTheTotalFees.Text = "Calculate The Total Fees";
+            this.btnCalculateTheTotalFees.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCalculateTheTotalFees.UseVisualStyleBackColor = true;
+            this.btnCalculateTheTotalFees.Click += new System.EventHandler(this.btnCalculateTheTotalFees_Click);
             // 
             // btnChooseCustomer
             // 
@@ -844,32 +870,6 @@
             this.label21.TabIndex = 51;
             this.label21.Text = "Created By User ID :";
             // 
-            // pControl_Grouptxt
-            // 
-            this.pControl_Grouptxt.Controls.Add(this.gbTotalFees);
-            this.pControl_Grouptxt.Controls.Add(this.txtTotalFeesAfterDiscount);
-            this.pControl_Grouptxt.Controls.Add(this.pictureBox9);
-            this.pControl_Grouptxt.Controls.Add(this.label11);
-            this.pControl_Grouptxt.Controls.Add(this.label16);
-            this.pControl_Grouptxt.Controls.Add(this.txtStatus);
-            this.pControl_Grouptxt.Controls.Add(this.txtVAT);
-            this.pControl_Grouptxt.Controls.Add(this.txtTotalBasicFees);
-            this.pControl_Grouptxt.Controls.Add(this.pictureBox8);
-            this.pControl_Grouptxt.Controls.Add(this.label12);
-            this.pControl_Grouptxt.Controls.Add(this.label14);
-            this.pControl_Grouptxt.Controls.Add(this.pictureBox5);
-            this.pControl_Grouptxt.Controls.Add(this.txtFeesDiscount);
-            this.pControl_Grouptxt.Controls.Add(this.pictureBox6);
-            this.pControl_Grouptxt.Controls.Add(this.pbImageFeesAfterDiscount);
-            this.pControl_Grouptxt.Controls.Add(this.txtReservationID);
-            this.pControl_Grouptxt.Controls.Add(this.lblFeesAfterDiscount);
-            this.pControl_Grouptxt.Controls.Add(this.label13);
-            this.pControl_Grouptxt.Controls.Add(this.pictureBox7);
-            this.pControl_Grouptxt.Location = new System.Drawing.Point(465, 20);
-            this.pControl_Grouptxt.Name = "pControl_Grouptxt";
-            this.pControl_Grouptxt.Size = new System.Drawing.Size(613, 213);
-            this.pControl_Grouptxt.TabIndex = 33;
-            // 
             // frmAddNewReservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -897,14 +897,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gbBasicInfoAdd.ResumeLayout(false);
             this.gbBasicInfoAdd.PerformLayout();
+            this.pControl_Grouptxt.ResumeLayout(false);
+            this.pControl_Grouptxt.PerformLayout();
             this.gbTotalFees.ResumeLayout(false);
             this.gbTotalFees.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImageFeesAfterDiscount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -913,8 +915,6 @@
             this.gbC_R.ResumeLayout(false);
             this.gbControlBooking.ResumeLayout(false);
             this.gbControlBooking.PerformLayout();
-            this.pControl_Grouptxt.ResumeLayout(false);
-            this.pControl_Grouptxt.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -15,7 +15,7 @@ namespace Data_Access_Hotel_Management_System
 
 
         public static bool HanderRoomsAndExpiredReservation(int LastUpdatedStatusByUserIDRoom,
-           int RoomID,  byte StatusRoom, 
+           int RoomID,  int StatusRoom, 
             int ReservationID,
           int StatusReservations )
         {
@@ -33,17 +33,17 @@ namespace Data_Access_Hotel_Management_System
 
 
                         cmd.CommandType=CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@RoomID", RoomID);
-                        cmd.Parameters.AddWithValue("@LastUpdatedStatusByUserID", LastUpdatedStatusByUserIDRoom);
-                        cmd.Parameters.AddWithValue("@Status", StatusRoom);
-                        cmd.Parameters.AddWithValue("@Status", StatusReservations);
+                        cmd.Parameters.AddWithValue("@RoomID", RoomID); 
+                        cmd.Parameters.AddWithValue("@LastUpdatedStatusByUserIDRoom", LastUpdatedStatusByUserIDRoom);
+                        cmd.Parameters.AddWithValue("@StatusRoom", StatusRoom);
+                        cmd.Parameters.AddWithValue("@StatusReservations", StatusReservations);
                         cmd.Parameters.AddWithValue("@ReservationID", ReservationID);
 
 
                      
 
                         conn.Open();
-                       cmd.ExecuteNonQuery();
+                        rows= cmd.ExecuteNonQuery();
 
 
                     }

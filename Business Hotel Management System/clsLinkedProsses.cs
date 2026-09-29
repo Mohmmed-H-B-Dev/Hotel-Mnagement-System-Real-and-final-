@@ -15,7 +15,7 @@ namespace Business_Hotel_Management_System
            
          int StatusReservations)
         {
-            return clsLinkedProssesDataAccess.HanderRoomsAndExpiredReservation(LastUpdatedStatusByUserIDRoom, RoomID, StatusRoom, ReservationID, StatusReservations);
+            return clsLinkedProssesDataAccess.HanderRoomsAndExpiredReservation(LastUpdatedStatusByUserIDRoom, RoomID, (int)StatusRoom, ReservationID, StatusReservations);
         }
     }
 }

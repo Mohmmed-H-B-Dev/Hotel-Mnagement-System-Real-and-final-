@@ -4,6 +4,7 @@ using DVLD.Login;
 using DVLD.User;
 using Hotel_Mnagement_System.Customers;
 using Hotel_Mnagement_System.Employees;
+using Hotel_Mnagement_System.global_classes;
 using Hotel_Mnagement_System.Reservations;
 using Hotel_Mnagement_System.Rooms;
 using Hotel_Mnagement_System.Users;
@@ -93,7 +94,7 @@ namespace Hotel_Mnagement_System
         }
         private void frmMain_Load(object sender, EventArgs e)
         {
-
+            cls_HandelRoomsAndExpiredReservation.Start();
             _SittingIsAdminOrNot();
         }
 

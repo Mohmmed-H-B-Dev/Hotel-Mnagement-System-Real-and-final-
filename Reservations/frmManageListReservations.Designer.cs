@@ -432,6 +432,7 @@
             this.gbRoomInfo.TabIndex = 21;
             this.gbRoomInfo.TabStop = false;
             this.gbRoomInfo.Text = "Room nfo";
+            this.gbRoomInfo.Enter += new System.EventHandler(this.gbRoomInfo_Enter);
             // 
             // lblFeesForMonth
             // 

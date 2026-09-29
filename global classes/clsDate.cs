@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DVLD.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -97,57 +98,95 @@ namespace Hotel_Mnagement_System.global_classes
 
             CountDays+=(Temp_dtToDate.Day-Temp_dtFromDate.Day)+1;
 
-            //  CountDays+=DaysFromTheParameterBeginDayOfMonth(Convert.ToInt16(Temp_dtFromDate.Day), Temp_dtFromDate.Month, Temp_dtFromDate.Year);
-            // CountDays+=DaysFromTheParameterBeginDayOfMonth(Convert.ToInt16(Temp_dtToDate.Day), Temp_dtToDate.Month, Temp_dtToDate.Year);
-
+          
             return CountDays;
         }
 
-       private int _GetDaysBetweenTowDates(DateTime dtFromDate, DateTime dtToDate)
+       private static int _GetDaysBetweenTowDates(DateTime dtFromDate, DateTime dtToDate)
         {
+            int d = 0;
+
             TimeSpan ts = dtToDate - dtFromDate;
+
+            if (dtToDate.Day==dtFromDate.Day&&dtToDate.Month==dtFromDate.Month&&dtToDate.Year==dtFromDate.Year)
+            {
+                TimeSpan selectTime =   dtFromDate.TimeOfDay;
+
+                bool IsMorning = selectTime<clsGlobal.TimeOut;
+
+                if (IsMorning)
+                {
+                    return ts.Days+1;
+                }
+                else
+                {
+                    //we use -1 to indicate that the selected time is after the checkout time, and therefore the day should not be counted as a full day.
+                    //and we send a message to the user to inform them that the selected time is after the checkout time,
+                    //and must be select a right time to count the day as a full day,
+                    //and if the user wants to count the day as a full day, he must select a time before the checkout time.
+                    return -1; ;
+                }
+
+               
+            }else if (dtToDate.Day!=dtFromDate.Day&&dtToDate.Month==dtFromDate.Month&&dtToDate.Year==dtFromDate.Year)
+            {
+                TimeSpan selectTime = dtFromDate.TimeOfDay;
+
+                bool IsMorning = selectTime<clsGlobal.TimeOut;
+
+                if (IsMorning)
+                {
+                    return ts.Days+1;
+                }
+                else
+                {
+                    //the we return the days without adding 1, because the selected time is after the checkout time, and therefore the day should not be counted as a full day.
+                    return ts.Days;
+                }
+
+            }
             return ts.Days;
         }
 
         public static int CalculateTheCostOfRentingFor_90_MaxDate_(DateTime dtFromDate, DateTime dtToDate)
         {
 
-       //     عليا استخدام ال سباند تايم في هذا المكان لي حساب  عدد الايام بين تارخين
-                وعمل المزامنة  مع التايمر لحساب الوقت المتبقي على الشقق وعمل لها تنظيق وصيانة 
-                وارسال تنبيهات للادارة  وارسال رسائل للزبائن قبل انتهاء مدة الايجار ب 10 ساعات
-
+  
                 return _GetDaysBetweenTowDates(dtFromDate, dtToDate);
-            int CountDays = 0;
-            if (dtFromDate.Year==dtToDate.Year)
-            {
-              return  _CalculateTheCostOfRentingFor_90_MaxDate_(dtFromDate, dtToDate);
-
-            }
-            int CountYears = 1;
-            DateTime TempToDate = new DateTime(dtFromDate.Year, 12, 31);
-
-            CountDays+=_CalculateTheCostOfRentingFor_90_MaxDate_(dtFromDate, TempToDate);
-            DateTime TempFromDate = new DateTime((dtFromDate.Year+CountYears), 1, 1);
-
-            do
-            {
-                if(TempFromDate.Year!=dtToDate.Year)
-                TempToDate = new DateTime(dtFromDate.Year+CountYears, 12, 31);
-                else
-                {
-                    TempToDate = dtToDate;
-                    CountYears--;
-                }
-                CountYears++;
-
-                CountDays+=_CalculateTheCostOfRentingFor_90_MaxDate_(TempFromDate, TempToDate);
-                TempFromDate = new DateTime(dtFromDate.Year+CountYears, 1, 1);
-            } while (dtToDate.Year!=(dtFromDate.Year+CountYears));
-            CountDays+=_CalculateTheCostOfRentingFor_90_MaxDate_(TempFromDate, dtToDate);
 
 
 
-            return CountDays;
+            //int CountDays = 0;
+            //if (dtFromDate.Year==dtToDate.Year)
+            //{
+            //  return  _CalculateTheCostOfRentingFor_90_MaxDate_(dtFromDate, dtToDate);
+
+            //}
+            //int CountYears = 1;
+            //DateTime TempToDate = new DateTime(dtFromDate.Year, 12, 31);
+
+            //CountDays+=_CalculateTheCostOfRentingFor_90_MaxDate_(dtFromDate, TempToDate);
+            //DateTime TempFromDate = new DateTime((dtFromDate.Year+CountYears), 1, 1);
+
+            //do
+            //{
+            //    if(TempFromDate.Year!=dtToDate.Year)
+            //    TempToDate = new DateTime(dtFromDate.Year+CountYears, 12, 31);
+            //    else
+            //    {
+            //        TempToDate = dtToDate;
+            //        CountYears--;
+            //    }
+            //    CountYears++;
+
+            //    CountDays+=_CalculateTheCostOfRentingFor_90_MaxDate_(TempFromDate, TempToDate);
+            //    TempFromDate = new DateTime(dtFromDate.Year+CountYears, 1, 1);
+            //} while (dtToDate.Year!=(dtFromDate.Year+CountYears));
+            //CountDays+=_CalculateTheCostOfRentingFor_90_MaxDate_(TempFromDate, dtToDate);
+
+
+
+            //return CountDays;
         }
 
 

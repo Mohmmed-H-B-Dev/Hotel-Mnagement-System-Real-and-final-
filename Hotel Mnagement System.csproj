@@ -126,6 +126,7 @@
     <Compile Include="global classes\clsGlobal.cs" />
     <Compile Include="global classes\clsValidatoin.cs" />
     <Compile Include="global classes\clsMailService.cs" />
+    <Compile Include="global classes\cls_HandelRoomsAndExpiredReservation.cs" />
     <Compile Include="global classes\util.cs" />
     <Compile Include="login\frmLogin.cs">
       <SubType>Form</SubType>
